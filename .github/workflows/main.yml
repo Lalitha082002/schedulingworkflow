@@ -1,0 +1,16 @@
+name: Scheduling Workflow
+on:
+  schedule:
+    - cron: '8 9 * * *'
+
+jobs:
+  scheduling:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+      - uses: actions/checkout@v3
+
+      - name: run python script
+      - run: python main.py
+    
